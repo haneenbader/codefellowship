@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<div th:replace="header :: header">...</div>
 <p th:text="${username}"></p>
 
 <p>User Name: <span th:text="${user.username}"></span></p>
