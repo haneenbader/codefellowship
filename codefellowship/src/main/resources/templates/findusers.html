@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="header :: header">...</div>
+<div th:each="user:${users}">
+    <p>User Name: <span th:text="${user.username}"></span></p>
+    <p>First Name: <span th:text="${user.firstName}"></span></p>
+    <p>Last Name: <span th:text="${user.lastName}"></span></p>
+    <p>Date Of Birth: <span th:text="${user.dateOfBirth}"></span></p>
+    <p>Bio: <span th:text="${user.bio}"></span></p>
+    <a th:href="'/users/'+${user.id}">Go to Profile</a>
+</div>
+</body>
+</html>
